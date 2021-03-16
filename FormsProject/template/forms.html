@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Forms Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+        <div class="container ">
+          <div class="jumbotron">
+            <form   method="POST">
+              <div class="form-group">
+              <!--  {{ forms }} if only {{forms}} is written than output will show all tags in same line or in right side -->
+              {{ form.as_p }} <!-- wat as_p does it is paragraph so after one tag another tag will be on <n></n>ext line -->
+              {% csrf_token %}<!-- wat this token does is that its check the valeus and all if this token is not than eror will genrate so to be in sefer side just put this tag -->
+
+              </div>
+              <input type="submit" class = 'btn btn-primary' value="Submit">
+
+            </form>
+
+          </div>
+
+
+    </div>
+  </body>
+</html>
